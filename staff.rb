@@ -1,6 +1,6 @@
 class Staff
   # attribute accessor methods reduce the amount of code needed
-  attr_accessor :name , :age
+  attr_accessor :name, :age
 
   def report
     puts "#{@name} is #{@age} years old"
