@@ -3,13 +3,22 @@
 # Declaring classes
 
 class Dog
-
-  def bark
-    puts 'woof! woof!'
+  def properties
+  #   declaring instance variables
+  @name = 'fido'
+  @weight = 34
+  @color = 'black'
   end
 
-  def move(destination)
-    puts "Running to the #{destination}!"
+
+  def bark
+    puts "woof! woof!"
+  end
+
+  def move
+    # declaring local variable
+    destination = 'AUS'
+    puts " #{@name} is #{@weight}lbs and #{@color} he ran to the #{destination}!"
   end
 end
 
@@ -35,7 +44,9 @@ end
 
 # intances of new classes
 fido = Dog.new
-fido.bark
+fido.properties
+fido.move
+
 
 whiskers = Cat.new
 whiskers.move('Mexico City')
@@ -56,3 +67,5 @@ end
 blender = Blender.new
 blender.clode_lid
 blender.blend
+
+
