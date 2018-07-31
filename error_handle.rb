@@ -1,9 +1,12 @@
 class Dog
-  attr_accessor :name, :age, :color
+  # attribute reader method GETS value of instance variable
+  attr_reader :name, :age, :color
 
+  # attribute writer method SETS instance variables
   def name=(val)
     if val == ""
-      puts 'name can\'t be empty!'
+      # data validation
+      raise 'name can\'t be empty!'
     else
       @name = val
     end
@@ -11,20 +14,28 @@ class Dog
 
   def age=(val)
     if val < 0
-      puts " #{val} isn't a valid age!"
+      raise " #{val} isn't a valid age!"
     else
       @age = val
     end
   end
+  def color=(val)
+    if val == ""
+      raise "#you need to select a color!"
+    else
+      @color = val
+    end
+  end
 
   def report
-    puts "#{@name} is #{@age} years old!"
+    puts "#{@name} is #{@age} years old! She is a #{@color} color"
   end
 
 end
 
 
 pooka = Dog.new
-pooka.name = ""
-pooka.age = -2
+pooka.name = "Pooka"
+pooka.age = 3
+pooka.color = 'black'
 pooka.report
