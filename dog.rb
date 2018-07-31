@@ -1,3 +1,7 @@
+
+
+# Declaring classes
+
 class Dog
 
   def bark
@@ -9,7 +13,6 @@ class Dog
   end
 end
 
-# Declaring classes with instance methods
 class Cat
   def meow
     puts 'meow!'
@@ -30,6 +33,7 @@ class Bird
   end
 end
 
+# intances of new classes
 fido = Dog.new
 fido.bark
 
@@ -38,3 +42,17 @@ whiskers.move('Mexico City')
 
 pijin = Bird.new
 pijin.fly('New York City!')
+
+
+class Blender
+  def clode_lid
+    puts 'lid is closed'
+  end
+  def blend
+    puts 'blending the ingredients'
+  end
+end
+
+blender = Blender.new
+blender.clode_lid
+blender.blend
