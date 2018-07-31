@@ -51,8 +51,8 @@ fido.move
 whiskers = Cat.new
 whiskers.move('Mexico City')
 
-pijin = Bird.new
-pijin.fly('New York City!')
+piolin = Bird.new
+piolin.fly('New York City!')
 
 
 class Blender

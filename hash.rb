@@ -36,6 +36,22 @@ groceries["queso"] = 2
 groceries["tortillas"] = 3
 groceries["cilantro"] = 4
 
-groceries.each {|x,y| puts "#{x}: #{y}"}
+
+# iterating through the hash with an .each loop
+
+groceries.each do |x,y|
+  puts "#{x}: #{y}"
+end
+
+
+# sorting hash with .sort_by method
+
+groceries = groceries.sort_by do | word, count|
+  word
+end
+
+
+puts groceries
+
 
 

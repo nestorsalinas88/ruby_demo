@@ -65,10 +65,7 @@ fido.name = "Fido"
 polly = Bird.new
 polly.name = "Polly"
 
-polly.age = 2
-polly.report_age
-fido.move("yard")
-whiskers.talk
+
 
 dillon = Armadillo.new
 dillon.name = "Dillon"
@@ -146,35 +143,36 @@ motorcycle.accelerate
 
 # one more for the inheritance!
 
-class Rectangle
-  attr_accessor :width, :height
-
-  def width=(val)
-    if val < 0
-      raise "Width can't be negative! "
-    end
-    @width = val
+class Camera
+  def take_picture
+    puts "triggered"
   end
 
-  def height=(val)
-    if value < 0
-      raise "height can't be negative"
-    end
-    @height = val
+  def load
+    puts "film winding"
   end
-
-  def area
-    width * height
-  end
-
 end
 
-class Square < Vehicle
 
+class DigitalCamera < Camera
+  def load
+    puts "insert memory card!"
+  end
 end
 
-square = Square.new
-square.width= 20
-square.height = 20
-square.area
+class Iphone < Camera
+  def load
+    puts "unlock screen"
+  end
+end
 
+camera = Camera.new
+camera.load
+camera.take_picture
+
+camera2 = DigitalCamera.new
+camera2.load
+camera2.take_picture
+
+camera3 = Iphone.new
+camera3.load
