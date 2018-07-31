@@ -35,3 +35,6 @@ fido.bark
 
 whiskers = Cat.new
 whiskers.move('Mexico City')
+
+pijin = Bird.new
+pijin.fly('New York City!')
