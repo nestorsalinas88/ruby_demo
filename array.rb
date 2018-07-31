@@ -7,3 +7,8 @@
 company_staff = ['monica', 'lance', 'emely', 'ben', 'emma', 'nestor']
 
 puts company_staff[0]
+
+
+employee_list = [['Lance Strong', 32, 'lance@gmail.com', '123 this address', true], ['Nestor Salinas', 25, 'nestor@gmail.com', '321 other address', false], ['Eme Awesome', 21, 'em@gmail.com', '672 this other', true]]
+
+puts employee_list

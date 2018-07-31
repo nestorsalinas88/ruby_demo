@@ -1,5 +1,3 @@
-
-
 def electronics(price, name)
   if name == 'iphone'
     puts "#{price}"

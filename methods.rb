@@ -38,6 +38,12 @@ def add(x,y,z)
 end
 
 
+def sub(x,y)
+  remainder = x - y
+  puts remainder
+end
+
+
 # method callback
 sound_horn
 accelerate
@@ -49,5 +55,8 @@ multiply(5,5,5)
 divide(35,5)
 
 add(40,40,40)
+
+sub(35,5)
+
 
 
