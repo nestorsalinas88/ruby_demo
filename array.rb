@@ -52,5 +52,19 @@ end
 
 this_method("Howdy!!", 'ean','ben', 'peter')
 
+# length method notifies you on the density of the array
+
+prices = ["this",3.99, 25.00, 8.99]
+puts prices.length
+
+# class method specifies the class type
+puts prices.class
+
+# capitalize method only targets the first letter
+
+puts prices[0].capitalize
+
+# include? method checks the array for comparisons
+puts prices.include?('this')
 
 
