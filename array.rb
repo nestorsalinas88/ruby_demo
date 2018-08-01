@@ -107,3 +107,8 @@ prices = [3.99,4.99,5.99,7.99]
 puts format("%.2f", total(prices))
 puts format("%.2f", refund(prices))
 show_discount(prices)
+
+# .each method in action with block
+
+['who', 'what','where','why','how'].each {|param| puts param}
+
