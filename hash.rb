@@ -53,5 +53,14 @@ end
 
 puts groceries
 
+# format sequence
+
+puts format("%12s %2i", "this is my magical number", 55)
+puts format("%12s %2.2f", "this is my magical number", 55.98723)
+puts format("%.2f", 3 / 4.0)
+puts format("%.1f", 3 / 4.0)
+puts format("%i", 3 / 4.0)
+puts format("%.2f", 3 / 4)
+puts format("$%.2f", 3 / 4.0)
 
 

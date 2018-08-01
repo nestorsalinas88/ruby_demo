@@ -44,3 +44,6 @@ tank2.weapon = 'laser beams!'
 tank2.activate
 tank2.move('colorado')
 tank2.attack
+
+
+

@@ -1,8 +1,10 @@
 class Mage
 
   attr_accessor :name, :spell, :damage
-  def enchantant(target)
+  def enchantant(target, target_health)
+    target_health =  target_health.to_i - damage
     puts "#{@name} casts #{@spell} on #{target}!"
+    puts "#{target_health} life remainding "
   end
 
 end
@@ -10,8 +12,8 @@ end
 caster = Mage.new
 caster.name = 'Dark Magician'
 caster.spell = 'Dark spell'
-caster.damage = -50
-caster.enchantant('My coffee')
+caster.damage = 50
+caster.enchantant('My coffee', 100)
 
 
 
