@@ -66,3 +66,19 @@ give do | present1, present2 |
   puts 'my method gave me... ', present1, present2
 end
 
+
+# using the YIELD keyword
+
+# def take
+#   yield "papas", "tomatos"
+# end
+#
+# take do |thing1, thing2|
+#   puts "list of groceries:", thing1, thing2
+# end
+
+def this_meth
+  yield 'iphone', 'galaxy droid', 'terrible device'
+end
+
+this_meth {|thing1, thing2, thing3| puts "list of electronics", thing1, thing2, thing3  }
