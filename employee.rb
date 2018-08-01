@@ -163,3 +163,25 @@ angela = HourlyEmployee.security_guard("Angela Matthews")
 ivan = HourlyEmployee.cashier("Ivan Stokes")
 angela.print_pay_stub
 ivan.print_pay_stub
+
+
+
+class Boat
+  def initialize(name)
+    @name = name
+  end
+end
+
+class PowerBoat < Boat
+  def initialize(name, motor_type)
+    super(name)
+    @motor_type = motor_type
+  end
+
+  def info
+    puts "name: #{@name}"
+    puts "Motor type: #{@motor_type}!"
+  end
+end
+
+PowerBoat.new("JET300", "350X").info
