@@ -14,9 +14,18 @@ class Employee
     end
     @salary = salary
   end
+  def initialize
+    @name = "Anon"
+    @salary = 0.0
+  end
   def print_stub
+    # inspecting for NIL value
+    p @salary, @name
     puts "Name: #{@name}"
+    # LOOK RIGHT HEE
+    # when diving make sure to use at least one FLOAT
     pay_period = (@salary / 365.0) * 14
+    # format sequence to remove extra decimal places
     pay_period = format("%0.2f", pay_period)
     puts "pay for this period was $#{pay_period}"
   end
@@ -33,3 +42,7 @@ sandra = Employee.new
 sandra.name = "Sandra Tolumerke"
 sandra.salary = 100000
 sandra.print_stub
+
+
+empty = Employee.new
+empty.print_stub
