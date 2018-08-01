@@ -67,4 +67,43 @@ puts prices[0].capitalize
 # include? method checks the array for comparisons
 puts prices.include?('this')
 
+# looping arrays
 
+group = ['Breanne', 'lance', 'emely', 'ben', 'emma', 'nestor']
+
+index = 0
+while index < group.length
+  puts group[index]
+  index += 1
+end
+
+
+
+def total(prices)
+  amount = 0
+  prices.each do |price|
+    amount += price
+  end
+  amount
+end
+
+def refund(prices)
+  amount = 0
+  prices.each do |price|
+    amount -= price
+  end
+  amount
+end
+
+def show_discount(prices)
+  prices.each do |price|
+    discount = price / 3.0
+    puts format("Discount is: $%.2f",discount)
+  end
+end
+
+
+prices = [3.99,4.99,5.99,7.99]
+puts format("%.2f", total(prices))
+puts format("%.2f", refund(prices))
+show_discount(prices)
