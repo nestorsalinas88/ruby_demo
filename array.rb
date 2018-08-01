@@ -19,3 +19,38 @@ employee_list.each {|item| puts item}
 employee_list.each do |sub_array|
   sub_array.each {|item| puts item}
 end
+
+
+
+
+fruit_string = "boulder, apple, banana, peach, cow"
+
+# split method to convert string into Array
+fruit = fruit_string.split(",")
+puts fruit
+
+# pop method removes the last item from array
+fruit.pop
+puts fruit
+
+
+# shift removes first item from array
+fruit.shift
+puts fruit
+
+# join method turns an array into a string
+puts fruit.join(", ")
+
+
+# splat method can receive one or more arguments
+
+def this_method(greeting, *workers)
+  workers.each do |workers|
+    puts "#{greeting}, #{workers}!!"
+  end
+end
+
+this_method("Howdy!!", 'ean','ben', 'peter')
+
+
+

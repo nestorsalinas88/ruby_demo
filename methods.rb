@@ -60,3 +60,8 @@ sub(35,5)
 
 
 
+# factorial methods are universal to OOP
+
+# initialize methods subclass < super class
+
+
