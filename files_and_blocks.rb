@@ -1,5 +1,5 @@
 
-# sifting through a big collection of words
+# opening a big collection stored in .txt file
 
 review_file = File.open("reviews.txt")
 
@@ -10,13 +10,25 @@ review_file.close
 
 
 
-# simplified version for going through collections in .txt file
+# simplified version for opening collections in .txt file
 contents = []
 
 File.open("reviews.txt") do |file|
   contents = file.readlines
 end
 
-puts contents
+# iterating through collection using .each method to find specified string in .txt file
 
+# relevant_lines = []
+# contents.each do |line|
+#   if line.include?("Chicago")
+#     relevant_lines << line
+#     end
+# end
+# puts relevant_lines
 
+# iterating through collection using find_all method
+
+relevant_lines = lines.find_all {|line| line.include?("Chicago")}
+
+puts relevant_lines
