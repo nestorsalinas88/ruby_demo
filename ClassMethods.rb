@@ -18,3 +18,26 @@ end
 
 Avatar.add(3,3,3)
 
+# more ClassMethods practice
+
+class Dude
+  # class attributes @@
+  # example of seperation of concerns
+  @@count = 0
+  attr_accessor :name, :age
+  def initialize(obj_name, obj_age)
+    @name = obj_name
+    @age = obj_age
+    @@count +=1
+  end
+  def self.how_many
+    @@count
+  end
+end
+
+
+Dude.new('john', 20)
+Dude.new('luke',25)
+Dude.new('luke',25)
+
+puts Dude.how_many

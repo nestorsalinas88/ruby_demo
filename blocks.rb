@@ -82,3 +82,18 @@ def this_meth
 end
 
 this_meth {|thing1, thing2, thing3| puts "list of electronics", thing1, thing2, thing3  }
+
+
+
+# blocks can return values
+# dont use the return keyword look to refactor and build good habits
+
+def make_cass
+  puts "preheat the oven"
+  ingredients = yield
+  puts "place #{ingredients}"
+end
+
+make_cass {"noodles, clereyt, food"}
+
+make_cass {"rice,bean.pudding"}
