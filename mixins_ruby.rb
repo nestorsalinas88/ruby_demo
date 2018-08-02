@@ -1,4 +1,4 @@
-
+# comparable module in action implemented on Strings and numeric classes
 class Steak
   include Comparable
 
@@ -54,3 +54,22 @@ deli = Apple.new(0.32)
 
 puts "granny > sweet"
 puts "#{granny > sweet}"
+
+# Enumerable module
+# this module targets hash and arrays
+
+class WordSplitter
+  include Enumerable
+  attr_accessor :string
+
+  def each
+    string.split(" ").each do |word|
+    yield word
+  end
+end
+end
+splitter = WordSplitter.new
+splitter.string = "one two three four"
+
+
+
