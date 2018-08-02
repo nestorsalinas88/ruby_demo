@@ -12,7 +12,6 @@ employee_list = [['Lance Strong', 32, 'lance@gmail.com', '123 this address', tru
 
 
 
-# what is the difference between these methods? (come back!)
 employee_list.each {|item| puts item}
 
 
@@ -66,6 +65,24 @@ puts prices[0].capitalize
 
 # include? method checks the array for comparisons
 puts prices.include?('this')
+
+
+
+# sort array in ascending and descending order
+
+books = ["Charlie and the Chocolate Factory", "War and Peace", "Utopia", "A Brief History of Time", "A Wrinkle in Time"]
+
+# To sort our books in ascending order, in-place
+books.sort! { |firstBook, secondBook| firstBook <=> secondBook }
+
+# Sort your books in descending order, in-place below
+books.sort!{|firstBook, secondBook| secondBook <=> firstBook}
+
+
+puts books
+
+
+
 
 # looping arrays
 
