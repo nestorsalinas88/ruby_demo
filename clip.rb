@@ -1,13 +1,9 @@
-class Clip
-  attr_reader :comments
-  def initialize
-    @comments = []
+module AcceptComment
+  def comments
+    @comments ||= []
   end
   def add_comment(comment)
     comments << comment
-  end
-  def play
-    puts "playing #{object_id}.."
   end
 end
 
@@ -17,34 +13,46 @@ module FirstModule
   end
 end
 
+class Clip
+  def play
+    puts "playing #{object_id}.."
+  end
+end
+
 
 class Video < Clip
+  include AcceptComment
   attr_accessor :resolution
 end
 
 class Song < Clip
+  include AcceptComment
   attr_accessor :beats_per_min
 end
 
-class Photo < Clip
+class Photo
+ include AcceptComment
  include FirstModule
-  puts "this is a photo"
+ def initialize
+   @format = 'JPEG'
+ end
 end
 
-clip = Photo.new
-clip.show
-clip.add_comment("this is awesome! ")
 
 
 video = Video.new
 video.add_comment("cool a slow motion effect")
 video.add_comment("weird ending")
 
+
 song = Song.new
 song.add_comment("awesome lyrics dude! ")
 
+photo = Photo.new
+photo.add_comment("beutiful lighting!")
 
-p video.comments, song.comments, clip.comments
+
+p video.comments, song.comments, photo.comments
 
 
 # different exercise practicing modules
