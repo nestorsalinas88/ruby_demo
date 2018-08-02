@@ -70,3 +70,21 @@ print_block_result do
 end
 
 print_block_result { " I hated Truncate!".include?("Truncated")}
+
+
+
+def bar_chart(arr)
+  arr.each do | value |
+    puts "$" * yield(value)
+  end
+end
+
+arr = [1,2,3,4,5]
+
+bar_chart(arr) { |number| 3 * number }
+
+
+
+
+
+bar_chart(arr) { |number| 20.0 / number }
