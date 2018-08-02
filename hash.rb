@@ -127,3 +127,29 @@ movie_ratings = {
 # Add your code below!
 
 movie_ratings.each_key { |k,v| puts k }
+
+
+
+# passing hash as method parameters
+
+def volume(opt)
+  opt[:width] * opt[:height] * opt[:depth]
+end
+
+result = volume(width: 10, height: 5, depth: 2.5)
+
+puts "volume is: #{result}"
+
+# passing hash params to class object
+
+class Shark
+  attr_accessor :name, :color, :type, :location
+  def initialize(name, color: nil, type: nil, location: nil)
+    self.name = name
+    self.color = color
+    self.type = type
+    self.location = location
+  end
+end
+
+p Shark.new('hammer-head', color: 'blue', type: 'great', location: 'netherlands')
