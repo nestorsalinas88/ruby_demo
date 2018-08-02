@@ -61,3 +61,20 @@ sub(35,5)
 # factorial methods are universal to OOP
 
 # initialize methods subclass < super class
+
+class Person
+  attr_accessor :name, :age
+  def initialize(object_name, object_age)
+    @name = object_name
+    @age = object_age
+  end
+end
+
+# instantiating class
+peepz1 = Person.new('john doe', 46)
+peepz2 = Person.new('vanessa', 33)
+peepz3 = Person.new('gilbert', 12)
+
+
+puts peepz1.name, peepz2.name, peepz3.name
+puts peepz1.age, peepz2.age, peepz3.age

@@ -30,5 +30,21 @@ end
 # iterating through collection using find_all method
 
 relevant_lines = lines.find_all {|line| line.include?("Chicago")}
+reviews = relevant_lines.reject { |line| line.include?("--")}
 
+adjectives = reviews.map do |review|
+  adjective = find_adjective(review)
+  "#{adjective.capitalize}"
+end
 puts relevant_lines
+puts adjectives
+
+
+
+
+
+def adj(str)
+  words = str.split(" ")
+  index = words.find_index("is")
+  words[index + 1]
+end
