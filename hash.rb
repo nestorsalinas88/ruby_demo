@@ -140,11 +140,11 @@ result = volume(width: 10, height: 5, depth: 2.5)
 
 puts "volume is: #{result}"
 
-# passing hash params to class object
+# passing hash params to class object (KEYWORD ARGUMENTS)
 
 class Shark
   attr_accessor :name, :color, :type, :location
-  def initialize(name, color: nil, type: nil, location: nil)
+  def initialize(name, color: , type: nil, location: nil)
     self.name = name
     self.color = color
     self.type = type
@@ -153,3 +153,20 @@ class Shark
 end
 
 p Shark.new('hammer-head', color: 'blue', type: 'great', location: 'netherlands')
+p Shark.new('great white shark', color: 'red and white')
+
+
+# more examples passing hash params
+
+def create(options = {})
+  puts "Creating #{options[:database]} for owner #{options[:user]}"
+end
+
+def connect(database:, host: 'localhost', port: 3309, user: "root")
+  puts "connecting to #{database} on #{host} port #{port} as #{user}"
+end
+
+create(database: "catalog", user: 'nestor')
+
+
+
