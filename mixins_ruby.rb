@@ -31,3 +31,26 @@ steak3.grade = "Select"
 puts "prime > choice: #{steak1 > steak2}"
 puts "prime < select: #{steak1 < steak3}"
 puts "prime == select: #{steak3 == steak3}"
+
+
+# another example on Comparable Methods
+
+class Apple
+  include Comparable
+
+  attr_accessor :weight
+  def initialize(weight)
+    self.weight = weight
+  end
+
+  def <=>(other)
+    self.weight <=> other.weight
+  end
+end
+
+granny = Apple.new(0.17)
+sweet = Apple.new(0.23)
+deli = Apple.new(0.32)
+
+puts "granny > sweet"
+puts "#{granny > sweet}"
