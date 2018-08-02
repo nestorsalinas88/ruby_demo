@@ -19,7 +19,7 @@ puts this_other_hash[:name]
 puts this_other_hash[:age]
 
 
-# creating hash with object notation
+# creating hash with constructor notation
 pets = Hash.new
 pets["Pooka"] = "dog"
 pets["Black"] = "color"
