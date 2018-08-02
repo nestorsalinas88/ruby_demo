@@ -28,6 +28,8 @@ fruit_string = "boulder, apple, banana, peach, cow"
 fruit = fruit_string.split(",")
 puts fruit
 
+p "1-800-894-3453".split("-")
+
 # pop method removes the last item from array
 fruit.pop
 puts fruit
@@ -135,3 +137,14 @@ my_array = [1, 2, 3, 4, 5]
 my_array.each do |num|
   puts num * num
 end
+
+
+p ["1",3,'This one thing',4,true,false].find_index(true)
+
+
+# implementing map method
+var = [2,3,4,5,6].map { |number| number ** 2}
+
+area_codes = ['1-800-495-2432', '1-312-312-5345'].map { |phone| phone.split("-")[1]}
+
+p var, area_codes

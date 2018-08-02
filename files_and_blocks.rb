@@ -41,7 +41,7 @@ puts adjectives
 
 
 
-
+# method to find adjective
 
 def adj(str)
   words = str.split(" ")
