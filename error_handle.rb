@@ -80,3 +80,50 @@ rescue
 end
 
 
+def drive(destination)
+  if destination == "hawaii"
+    raise "you can't drive to hawaii"
+  end
+end
+
+begin
+  drive("hawaii")
+rescue => error
+  puts error.message
+end
+
+class SmallOven
+  attr_accessor :contents
+
+  def turn_on
+    puts "turning the oven on"
+    @state = "on"
+  end
+  def turn_off
+    puts "turning oven off"
+    @state = "off"
+  end
+
+  def bake
+    unless @state == "on"
+      raise "you need to turn the oven on first"
+    end
+    if @contents == nil
+      raise "there's nothing inside the oven"
+    end
+    "golden brown #{contents}"
+  end
+end
+
+
+dinner = ['turkey', 'cassarole', 'pie']
+oven = SmallOven.new
+oven.turn_on
+dinner.each do |item|
+  begin
+    oven.contents = item
+    puts "serving #{oven.bake}"
+  rescue => error
+    puts "error #{error.message}"
+  end
+end

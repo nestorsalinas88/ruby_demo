@@ -127,19 +127,7 @@ puts format("%.2f", total(prices))
 puts format("%.2f", refund(prices))
 show_discount(prices)
 
-# .each method in action with block
 
-['who', 'what','where','why','how'].each {|param| puts param}
-
-
-my_array = [1, 2, 3, 4, 5]
-
-my_array.each do |num|
-  puts num * num
-end
-
-
-p ["1",3,'This one thing',4,true,false].find_index(true)
 
 
 # implementing map method
@@ -189,5 +177,24 @@ until y < 0 do
 end
 puts "finally negative #{y}"
 
+# .each method in action with block
 
+['who', 'what','where','why','how'].each {|param| puts param}
+
+
+my_array = [1, 2, 3, 4, 5]
+
+my_array.each do |num|
+  puts num * num
+end
+
+
+p ["1",3,'This one thing',4,true,false].find_index(true)
+
+# .select method
+
+first_array = [-10,-32,-34,-5,5,3]
+pos = first_array.select {|item| item >= 0}
+
+puts pos
 
