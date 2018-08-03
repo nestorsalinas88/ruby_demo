@@ -14,9 +14,9 @@ get("/movies/new") do
 end
 
 
-post("/movies/create") do
+post("/movies/new") do
   @movie = Movie.new
-  @movie.title = params["title"]
+  @movie.title = params['title']
   @movie.director = params['director']
   @movie.year = params['year']
   store.save(@movie)

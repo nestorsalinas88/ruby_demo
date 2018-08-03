@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>New Movies</title>
+  <style>
+    body{
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+<body>
+<h1>Create a movies</h1>
+<form method="post" action="/movies/new">
+  <label for="title">
+    <input type="text" id="title" placeholder="enter a title" name="title">
+  </label>
+  <label for="director">
+    <input type="text" id="director" placeholder="who directed?" name="director">
+  </label>
+  <label for="year">
+    <input type="text"n id="year" placeholder="released year?" name="year">
+  </label>
+  <input type="submit" placeholder="Enter" >
+</form>
+
+<a href="/movies">Back to index</a>
+</body>
+</html>
