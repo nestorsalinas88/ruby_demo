@@ -148,3 +148,41 @@ var = [2,3,4,5,6].map { |number| number ** 2}
 area_codes = ['1-800-495-2432', '1-312-312-5345'].map { |phone| phone.split("-")[1]}
 
 p var, area_codes
+
+
+# for loops
+
+# two dots means its inclusive
+for i in 0..5
+  puts i
+end
+
+
+# three periods means its exclusive
+
+for x in 0...5
+  puts x
+end
+
+
+
+# while loops
+
+g = 1
+limit = 9
+while g <= limit do
+  puts "#{g}"
+  g += 1
+end
+
+
+
+# until loops
+
+
+y = 7
+until y < 0 do
+  puts "#{y}"
+  y -= 1
+end
+puts "finally negative #{y}"
