@@ -39,3 +39,44 @@ pooka.name = "Pooka"
 pooka.age = 3
 pooka.color = 'black'
 pooka.report
+
+
+# raise and rescue exceptions
+
+def first_methd
+  risky_method
+  puts "Ill be skipped!"
+end
+
+def risky_method
+  raise "oops!"
+  puts "ill be skipped"
+end
+
+begin
+first_methd
+rescue
+  puts "rescue!!!"
+end
+
+
+# more on exceptions
+
+
+def this_one_method
+  other_method
+  puts "this is my method that"
+end
+
+def other_method
+  raise "Handle that will hault the method from executing"
+  "Puts this is another method"
+end
+
+begin
+  this_one_method
+rescue
+  puts " you have been rescued"
+end
+
+

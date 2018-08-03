@@ -179,10 +179,15 @@ end
 
 # until loops
 
-
+# initializer
 y = 7
+
+# condition
 until y < 0 do
   puts "#{y}"
   y -= 1
 end
 puts "finally negative #{y}"
+
+
+
