@@ -19,18 +19,20 @@ end
 
 
 # math
-def multiply(x,y,z)
+def multiply x,y,z
   product = x * y * z
   puts product
 end
 
 
-def divide(x,y)
+def divide x,y
   quotient =  x / y
   puts quotient
 end
 
-
+def function arg1 =2 , arg2 =4
+   arg1 + arg2
+end
 
 def add(x,y,z)
   sum = x + y + z
