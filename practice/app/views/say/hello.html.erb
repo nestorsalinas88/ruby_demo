@@ -6,4 +6,17 @@
 <p>
   Say
   <%= link_to "Goodbye", say_goodbye_path %>!
+  <%= 1 + 5 %>  <br>
+  <%= "Nestor" + "Salinas" %> <br>
+  <%= 1.hour.from_now.localtime %> <br>
 </p>
+
+
+<ul>
+    <% @files.each do |file| %>
+    <li>
+      file name is: <%=file %>
+    </li>
+    <% end %>
+
+</ul>
