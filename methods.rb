@@ -80,3 +80,14 @@ peepz3 = Person.new('gilbert', 12)
 
 puts peepz1.name, peepz2.name, peepz3.name
 puts peepz1.age, peepz2.age, peepz3.age
+
+
+5.downto(1) do |x|
+  puts x
+  puts "take off" if x == 1
+end
+
+4.downto(-3) do |x|
+  puts x
+  puts "this is 0" if x == 0
+end
